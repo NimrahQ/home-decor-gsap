@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+   <div class="container">
+    <div class="top">
+        <div class="logo">
+            <a href="#">decor</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Home Decor</a></li>
+                <li><a href="#">How it Work</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#"><i class="fa fa-bars"></i></a></li>
+            </ul>
+        </nav>
+    </div>
+
+<div class="content">
+    <div class="index">
+        <p>01</p>
+    </div>
+    <div class="heading">
+        <h1 ><span style="font-weight:400 ;">being at</span> <br> home</h1>
+        <p>meet Your New Comfort Zone</p>
+    </div>
+</div>
+
+<div class="img-box">
+    <div class="img img1">
+        <img src="./images/PngItem_4888797.png" alt="">
+    </div>
+    <div class="img img2">
+        <img src="./images/toppng.com-modern-furniture-chair-745x957.png" alt="">
+       
+    </div>
+
+    <div class="img img3">
+        <img src="./images/PngItem_2150352.png" alt="">
+    </div>
+</div>
+
+<div class="circle">
+    <div class="sm sm1"></div>
+    <div class="sm sm2"></div>
+    <div class="sm sm3"></div>
+</div>
+
+   </div> 
+ 
+   <script>
+    document.querySelector('.sm3').addEventListener('click',()=>{
+       gsap.to('.circle',{
+        rotate:'50deg',
+        duration: .5
+       })
+       gsap.to('.sm2',{
+        scale:1,
+        backgroundColor:'#1c1c1c',
+        duration: .5
+       })
+       gsap.to('.sm3',{
+        scale:8,
+        backgroundColor:'transparent',
+        duration: .5,
+        rotate:'-50deg'
+       })
+       gsap.to('.sm1',{
+        scale:1,
+        backgroundColor:'#1c1c1c',
+        duration: .5,
+        rotate:'-50deg'
+       })
+       gsap.to('.img',{
+        scale:0,
+        duration: .5
+       })
+       gsap.to('.img3',{
+        scale:1,
+        duration: .5,
+        delay: .2
+       })
+       document.querySelector('.index p').textContent = '03';
+      
+    })
+
+
+    document.querySelector('.sm2').addEventListener('click',()=>{
+       gsap.to('.circle',{
+        rotate:0,
+        duration: .5
+       })
+       gsap.to('.sm2',{
+        scale:8,
+        backgroundColor:'transparent',
+        duration: .5,
+        rotate:'1deg'
+       })
+       gsap.to('.sm3',{
+        scale:1,
+        backgroundColor:'#1c1c1c',
+        duration: .5,
+        rotate:'-50deg'
+       })
+       gsap.to('.sm1',{
+        scale:1,
+        backgroundColor:'#1c1c1c',
+        duration: .5,
+        rotate:'-50deg'
+       })
+       gsap.to('.img',{
+        scale:0,
+        duration: .5
+       })
+       gsap.to('.img2',{
+        scale:1,
+        duration: .5,
+        delay: .2
+       })
+       document.querySelector('.index p').textContent = '02';
+      
+    })
+
+
+
+    document.querySelector('.sm1').addEventListener('click',()=>{
+       gsap.to('.circle',{
+        rotate:'-50deg',
+        duration: .5
+       })
+       gsap.to('.sm1',{
+        rotate:'49deg',
+        scale:8,
+        backgroundColor:'transparent',
+        duration: .5
+       })
+       gsap.to('.sm2',{
+        scale:1,
+        backgroundColor:'#1c1c1c1',
+        duration: .5,
+        rotate:'-50deg'
+       })
+       gsap.to('.img',{
+        scale:0,
+        duration: .5
+       })
+       gsap.to('.img1',{
+        scale:1,
+        duration: .5,
+        delay: .2
+       })
+       document.querySelector('.index p').textContent = '01';
+    })
+   </script>
+
+</body>
+</html>
